@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import "tailwindcss";
+
+.font-handwriting {
+  font-family: 'Patrick Hand', cursive;
+}
+
+
+:root {
+  --primary: #3B82F6;
+  --bg-light: #EFF6FF;
+  --bg-white: #FFFFFF;
+  --bg-secondary: #F3F4F6;
+
+  --accent-1: #A5D8FF;
+  --accent-2: #D0BCFF;
+  --accent-3: #B197FC;
+
+  --dark-bg: #000000;
+  --dark-secondary: #404040;
+  --dark-muted: #737373;
+}
+
+/* Soft gradient blobs */
+.hero-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  /* Start hidden */
+}
+
+/* Typewriter Effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #3B82F6;
+  /* Cursor color */
+  white-space: pre-wrap;
+  /* Allow wrapping but keeping structure */
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  display: inline-block;
+  max-width: 100%;
+}
+
+@keyframes typing {
+  from {
+    max-width: 0
+  }
+
+  to {
+    max-width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #3B82F6
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-in-word {
+  transform: translateY(2px);
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
